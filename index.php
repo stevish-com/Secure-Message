@@ -1,5 +1,6 @@
 <?php
 /*
+Version 1.0
 See Readme for description
 
     Copyright (C) 2014 Stephen Narwold

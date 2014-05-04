@@ -1,5 +1,6 @@
 Stevish Secure Message
 ======================
+Version 1.0
 
 PHP script to allow the public to email you securely with no software for them to install.
 
