@@ -13,6 +13,22 @@ This is accomplished in 3 main steps:
 
 4. **Decryption.** This script does not handle decryption. You are responsible to have your own decryption software and a copy of your secret PGP key (which should obviously match the public key you gave the server)
 
+    Copyright (C) 2014 Stephen Narwold
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
 Prerequisites
 =============
 You need to know how to generate and use PGP keys, and understand how to add public keys to your web-server's keyring. Your webserver, then, will obviously need to have gnupg installed.
