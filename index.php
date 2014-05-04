@@ -1,6 +1,9 @@
 <?php
 if( $_SERVER['HTTPS'] != "on" )
 	die("This page cannot be viewed without a secure connection. Please go to <a href='https://s.stevish.com/message'>https://s.stevish.com/message</a>.");
+if(!file_exists("options.php")) {
+	die("Options.php is missing! Please edit options_example.php, set the options, and save it as options.php");
+}
 require_once("gpg_encrypt.php");
 require_once("options.php");
 
