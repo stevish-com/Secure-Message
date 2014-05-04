@@ -65,8 +65,6 @@ if(!$messagerr && !$filerr && ($filedata || $message)) {
 	$endtime = microtime(true);
 	$totaltime = $endtime - $starttime;
 	
-	
-	
 	if($filedata) {
 		send_email($to_array[$to]['email'], "From s.stevish.com/message\nMessage ID: $id\nContains attachment\n\n" . $message, $from, $subject, $filename, $filedata, "application/gnupg");
 		echo "Message (id#<strong>$id</strong>) and file successfully encrypted and sent to {$to_array[$to]['name']} in $totaltime seconds. Make a note of the id# if you need delivery confirmation.<hr/><a href='/message/'>Send another message</a>";
@@ -77,7 +75,7 @@ if(!$messagerr && !$filerr && ($filedata || $message)) {
 		$success = true;
 	}
 } else if(!$messagerr && !$filerr && !$filedata && !$message) {
-	echo "<strong style='font-size: 1.3em'>Welcome to Steve's message center. Simply input your message in the box below, or upload a file (or both) and click send, and it will be encrypted and sent to Steve. You may now also use this form to send a message to Tom.</strong><hr/>";
+	echo $welcome_message;
 } else {
 	echo "No message was sent. <br/>";
 	if($filerr)
