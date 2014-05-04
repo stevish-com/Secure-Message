@@ -1,5 +1,5 @@
-Secure-Message
-==============
+Stevish Secure Message
+======================
 
 PHP script to allow the public to email you securely with no software for them to install.
 
