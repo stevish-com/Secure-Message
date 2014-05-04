@@ -5,17 +5,13 @@ PHP script to allow the public to email you securely with no software for them t
 
 This is accomplished in 3 main steps:
 
-1. SSL
-SSL is assumed! If there is no SSL connection (HTTPS) to this script, it will not run because the message would not be secure
+1. **SSL.** SSL is assumed! If there is no SSL connection (HTTPS) to this script, it will not run because the message would not be secure
 
-2. Encryption
-The submitted message and optional file are encrypted using Gnu Privacy Guarg (GPG). In order for this to work, you must provide at least one public PGP key. If more than one is provided, message senders will have the option of which person (or name-email-key) to send the message to.
+2. **Encryption.** The submitted message and optional file are encrypted using Gnu Privacy Guarg (GPG). In order for this to work, you must provide at least one public PGP key. If more than one is provided, message senders will have the option of which person (or name-email-key) to send the message to.
 
-3. Transmission
-The encrypted message and/or file is then attached to an email and sent to the email address on file for the key used.
+3. **Transmission.** The encrypted message and/or file is then attached to an email and sent to the email address on file for the key used.
 
-4. Decryption
-This script does not handle decryption. You are responsible to have your own decryption software and a copy of your secret PGP key (which should obviously match the public key you gave the server)
+4. **Decryption.** This script does not handle decryption. You are responsible to have your own decryption software and a copy of your secret PGP key (which should obviously match the public key you gave the server)
 
 Prerequisites
 =============
