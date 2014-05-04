@@ -1,9 +1,8 @@
 <?php
-require_once("gpg_encrypt.php");
-require_once("options.php");
-
 if( $_SERVER['HTTPS'] != "on" )
 	die("This page cannot be viewed without a secure connection. Please go to <a href='https://s.stevish.com/message'>https://s.stevish.com/message</a>.");
+require_once("gpg_encrypt.php");
+require_once("options.php");
 
 $message = false;
 $starttime = microtime(true);
