@@ -60,17 +60,6 @@ if(!$messagerr && $_FILES['attfile']['name']) {
 
 if(!$messagerr && !$filerr && ($filedata || $message)) {
 	$id = intval(str_replace(array("\r", "\n"), "", file_get_contents('id.php')));
-	while($prime == false) {
-		$prime = true;
-		for($i=2;$i<$id;$i++) {
-			if($id % $i == 0) {
-				$prime = false;
-				break;
-			}
-		}
-		if($prime == false)
-			$id++;
-	}
 	file_put_contents('id.php', $id+1);
 
 	$endtime = microtime(true);
