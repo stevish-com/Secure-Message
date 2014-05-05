@@ -2,17 +2,21 @@ Stevish Secure Message
 ======================
 Version 1.0
 
-PHP script to allow the public to email you securely with no software for them to install.
+PHP script to allow the public to email you securely with no software for them to install. Possible uses include giving clients a way to securely transmit desired passwords, or giving family members a way to send you their credit card number to help them sign up for stuff. This script is perfect for paranoid crypto-geeks who can't convince friends family or clients to install and set up encryption software and public/private keypairs.
 
-This is accomplished in 3 main steps:
+This is accomplished in 4 main steps:
 
 1. **SSL.** SSL is assumed! If there is no SSL connection (HTTPS) to this script, it will not run because the message would not be secure
 
-2. **Encryption.** The submitted message and optional file are encrypted using Gnu Privacy Guarg (GPG). In order for this to work, you must provide at least one public PGP key. If more than one is provided, message senders will have the option of which person (or name-email-key) to send the message to.
+2. **Encryption.** The submitted message and optional file are encrypted using Gnu Privacy Guard (GPG). In order for this to work, you must provide at least one public PGP key. If more than one is provided, message senders will have the option of which person (or name-email-key) to send the message to.
 
 3. **Transmission.** The encrypted message and/or file is then attached to an email and sent to the email address on file for the key used.
 
 4. **Decryption.** This script does not handle decryption. You are responsible to have your own decryption software and a copy of your secret PGP key (which should obviously match the public key you gave the server)
+
+Open Source
+===========
+As all security software should be (in my humble opinion), this software is open source. If you know anything about php, I encourage you to read through the entirety of the code (index.php and all the files it includes... It's really not that long), and understand the logic behind it. You are always responsible for your own security, so OWN it, and double-check my work. If you find a security hole, make it public by posting an issue or, better yet, submit a fix. 
 
     Copyright (C) 2014 Stephen Narwold
 
